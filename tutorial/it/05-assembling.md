@@ -16,7 +16,7 @@ a seconda della tensione applicata sul relé stesso. Quando si acquista un relé
 * la tensione di alimentazione
 * la tensione di attivazione
 
-Per il carico massimo sul circuito controllato di solito i relè arrivano tutti a 250 V/10 A per cui direi,
+Per il carico massimo sul circuito controllato di solito i relè arrivano tutti a 250 V/10 A per cui direi che,
 a meno che avete una centrale nucleare, dovrebbe andar bene.
 
 La tensione di alimentazione di solito è 5 V. Accertatevene all'acquisto. L'alimentazione andrà collegata
