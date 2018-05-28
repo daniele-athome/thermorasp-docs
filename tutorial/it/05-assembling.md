@@ -1,7 +1,7 @@
 ## Costruzione
 La costruzione è talmente semplice che mi sembra inutile andare step-by-step sulle saldature dei singoli
 componenti.  
-La scelta dei pin è stata assolutamente personale. Ovviamente non vuol dire che potete scegliere tre pin a caso.
+La scelta dei pin è stata assolutamente personale. Ovviamente non vuol dire che potete scegliere dei pin a caso.
 
 #### Circuito relè
 La scheda o circuito relè è una scheda preassemblata con uno o più relè (dipende da cosa avete acquistato).
