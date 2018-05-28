@@ -1,8 +1,7 @@
 Raspberry PI Smart Thermostat tutorial
 ======================================
 
-### Un po' di storia (potete anche saltarla)
-
+## Un po' di storia (potete anche saltarla)
 Vi presento il mio (ormai ex) termostato:
 
 ![Junkers TR200](termostat-junkers-tr200.jpg)
@@ -34,8 +33,10 @@ che adatterò lentamente ad uno degli standard sul mercato che devo ancora scegl
 
 Basta storia, andiamo sulla pratica.
 
-### Architettura hardware
+## Funzionamento di una caldaia
+TODO funzionamento base caldaia base, circuito ON/OFF
 
+## Architettura hardware
 Il termostato sarà un semplice relé supportato da una board Raspberry PI Zero W.
 Lo schema di costruzione è disponibile in un file per [Fritzing](http://fritzing.org/) disponibile [in questo repository](../../hardware/baremetal/thermostat_v1.fzz).
 
@@ -53,13 +54,12 @@ Eventualmente affidatevi al vostro negozio di elettronico di fiducia. Ecco la li
 * Raspberry PI Zero W ([pinout](https://pinout.xyz/))
 * resistore da 4.7K
 * sensore di temperatura DS18B20
-* circuito relé ([tipo questo](http://amzn.eu/ec8kNKX), l'importante è che si attivi a 3.3V)
+* circuito relé ([tipo questo](http://amzn.eu/ec8kNKX), l'importante è che si attivi a 3.3V, vedremo in seguito cosa vuol dire)
 * cavi elettrici fini (non quelli per la 220 V) di vario colore
 * alimentatore USB (va bene anche quello per smartphone)
 * tester/multimetro
 
-### Avvertenze e note sulla costruzione
-
+## Avvertenze e note sulla costruzione
 La costruzione è semplice, tuttavia alcune avvertenze sui possibile pericoli, visto che comunque state
 per comunicare con una caldaia.
 
@@ -72,13 +72,41 @@ se fosse una scheda Arduino con due LED. Il tutorial include una fase di test de
 4. Chiaramente non mi assumo nessuna responsabilità su qualunque danno o problema possiate avere.
 Sappiate tuttavia che il termostato in questione mi scalda egregiamente da circa un anno.
 
-### Costruzione e test
-
+## Costruzione
 La costruzione è talmente semplice che mi sembra inutile andare step-by-step sulle saldature dei singoli
 componenti.  
-La scelta dei pin è stata assolutamente personale. A parte alcune scelte obbligate (es. 3.3V), la porta dati
-può essere uno qualsiasi dei pin abilitati ai segnali digitali e avete a disposizioni più di una porta di terra (GND).
-Analizzate attentamente [il pinout della Rasp](https://pinout.xyz/) e decidete.
+La scelta dei pin è stata assolutamente personale. Ovviamente non vuol dire che potete scegliere tre pin a caso.
+
+#### Circuito relè
+La scheda o circuito relè è una scheda preassemblata con uno o più relè (dipende da cosa avete acquistato).
+Il circuito include alcuni componenti di supporto necessari a rendere controllabile il relé
+(il rettangolino blu con le viti) dalla vostra Rasp.
+Su questo punto vorrei soffermarmi visto che qui ho fatto il mio primo errore. Ma partiamo con una piccola introduzione.
+
+Un relè è un componente che, se opportunamente alimentato, chiude o apre un circuito sotto il suo controllo
+a seconda della tensione applicata sul relé stesso. Quando si acquista un relé bisogna tenere conto di tre cose:
+
+* la corrente e la tensione massime per il circuito controllato dal relè
+* la tensione di alimentazione
+* la tensione di attivazione
+
+Per il carico massimo sul circuito controllato di solito i relè arrivano tutti a 250 V/10 A per cui direi,
+a meno che avete una centrale nucleare, dovrebbe andar bene.
+
+La tensione di alimentazione di solito è 5 V. Accertatevene all'acquisto. L'alimentazione andrà collegata
+ad [un pin 5 V](https://pinout.xyz/pinout/pin2_5v_power).
+
+La tensione di attivazione è quella necessaria per comunicare al relè di aprire o chiudere il circuito
+dall'altra parte (il circuito ON/OFF della caldaia). La tensione in questione è quella fornita dal pin
+dati digitale a cui collegherete il pin dati della scheda relè (cavo giallo nello schema). Quando il pin
+è impostato ad un valore alto (1 - HIGH), la Rasp emette una tensione di 3.3 V. A quel punto il relè chiude
+il circuito sul contatto "NC" (normally closed) e lo apre nel contatto "NO" (normally open).
+Abbassando il pin (0 - LOW), il relè invertirà la situazione: NC aperto, NO chiuso.
+
+(schema o animazione funzionamento relè)
+
+Peccando di disattenzione, ho acquistato per errore un relè che si attiva a 5 V. Me la sono cavata con un "magheggio" lato software, ma ve lo sconsiglio (onestamente non ho capito come abbia fatto a funzionare).
+**Accertatevi che il relè si attivi a 3.3 V.**
 
 Alla fine dovreste avere un risultato simile a questo:
 
