@@ -6,13 +6,11 @@ La scelta dei pin è stata assolutamente personale. Ovviamente non vuol dire che
 Di seguito scenderemo nel dettaglio dei componenti che collegheremo alla Raspberry.
 
 #### Circuito relè
-
-![Relay board](relay_board.jpg)
-
 La scheda o circuito relè è una scheda preassemblata con uno o più relè (dipende da cosa avete acquistato).
 Il circuito include alcuni componenti di supporto necessari a rendere controllabile il relé
 (il rettangolino blu con le viti) dalla vostra Rasp.
-Su questo punto vorrei soffermarmi visto che qui ho fatto il mio primo errore. Ma partiamo con una piccola introduzione.
+
+![Relay board](relay_board.jpg)
 
 Un relè è un componente che, se opportunamente alimentato, chiude o apre un circuito sotto il suo controllo
 a seconda della tensione applicata sul relé stesso. Quando si acquista un relé bisogna tenere conto di tre cose:
@@ -34,7 +32,7 @@ dati digitale a cui collegherete il pin dati della scheda relè (cavo giallo nel
 il circuito sul contatto "NC" (normally closed) e lo apre nel contatto "NO" (normally open).
 Abbassando il pin (0 - LOW), il relè invertirà la situazione: NC aperto, NO chiuso.
 
-(schema o animazione funzionamento relè)
+![Animated relay](animatedrelay.gif)
 
 Peccando di disattenzione, ho acquistato per errore un relè che si attiva a 5 V. Me la sono cavata con un "magheggio" lato software, ma ve lo sconsiglio (onestamente non ho capito come abbia fatto a funzionare).
 **Accertatevi che il relè si attivi a 3.3 V.**
