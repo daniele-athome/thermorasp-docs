@@ -41,7 +41,7 @@ Il circuito relè dispone di tre pin:
 
 * alimentazione
 * controllo
-* terra
+* massa
 
 Il nome del pin è di solito identificato direttamente sulla scheda, in alternativa rivolgetevi al
 produttore/venditore per ottenere un datasheet o un documento che contenga tali informazioni.
@@ -49,7 +49,7 @@ produttore/venditore per ottenere un datasheet o un documento che contenga tali 
 L'alimentazione andrà collegata ad un pin della Rasp che fornisca sufficiente tensione (di solito un pin 5 V).
 Il pin di controllo (o pin dati) è quello che andrà alzato o abbassato digitalmente (via software) per
 far lavorare il relè. Lo collegheremo quindi a un pin dati (GPIO) della Raspberry.
-L'ultimo che rimane è il pin di terra che collegheremo ad un pin terra (GND).
+L'ultimo che rimane è il pin di massa che collegheremo ad un pin massa (GND).
 
 #### Sensore di temperatura
 Il sensore di temperatura è un DS18B20, un componentino minuscolo:
@@ -58,7 +58,7 @@ Il sensore di temperatura è un DS18B20, un componentino minuscolo:
 
 Il sensore dispone di tre pin:
 
-* terra (1)
+* massa (1)
 * dati/controllo (2)
 * alimentazione (3)
 
