@@ -12,6 +12,6 @@ Raspberry PI Smart Thermostat tutorial
 7. [Installazione firmware](07-firmware.md)
 8. [Montaggio](08-installing.md)
 
-### Sensori di temperature remoti
+### Sensori di temperatura remoti
 
 TODO
