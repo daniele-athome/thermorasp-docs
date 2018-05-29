@@ -21,5 +21,4 @@ Per controllare la temperatura, ciò che un termostato fa, in soldoni, è:
 3. Se la temperatura è inferiore a quella richiesta, attiva la caldaia
 4. Ripetere dal punto 1
 
-Lo stesso ragionamento può essere usato nel verso opposto, per raffreddare. Nel contesto di questo tutorial,
-il nostro termostato sarà di *riscaldamento*.
+Lo stesso ragionamento può essere usato nel verso opposto, per raffreddare - utile per controllare un condizionatore, anche se di solito hanno un termostato integrato. Nel contesto di questo tutorial, il nostro termostato sarà di *riscaldamento*.
