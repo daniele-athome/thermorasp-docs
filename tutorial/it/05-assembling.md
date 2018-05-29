@@ -28,9 +28,9 @@ ad [un pin 5 V](https://pinout.xyz/pinout/pin2_5v_power).
 La tensione di attivazione è quella necessaria per comunicare al relè di aprire o chiudere il circuito
 dall'altra parte (il circuito ON/OFF della caldaia). La tensione in questione è quella fornita dal pin
 dati digitale a cui collegherete il pin dati della scheda relè (cavo giallo nello schema). Quando il pin
-è impostato ad un valore alto (1 - HIGH), la Rasp emette una tensione di 3.3 V. A quel punto il relè chiude
-il circuito sul contatto "NC" (normally closed) e lo apre nel contatto "NO" (normally open).
-Abbassando il pin (0 - LOW), il relè invertirà la situazione: NC aperto, NO chiuso.
+è impostato ad un valore alto (1 - HIGH), la Rasp emette una tensione di 3.3 V. A quel punto il relè apre
+il circuito sul contatto "NC" (normally closed) e lo chiude nel contatto "NO" (normally open).
+Abbassando il pin (0 - LOW), il relè invertirà la situazione: NC chiuso, NO aperto.
 
 ![Animated relay](animatedrelay.gif)
 
