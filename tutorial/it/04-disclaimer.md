@@ -1,5 +1,5 @@
 ## Avvertenze e note sulla costruzione
-La costruzione è semplice, tuttavia alcune avvertenze sui possibile pericoli, visto che comunque state
+La costruzione è semplice, tuttavia alcune avvertenze sui possibile pericoli, visto che state
 per comunicare con una caldaia.
 
 1. Accertatevi che possiate farlo. Se la casa non è vostra, potreste non avere il permesso del proprietario.
