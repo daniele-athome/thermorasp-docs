@@ -2,8 +2,8 @@
 La caldaia non è altro che un elettrodomestico che, su richiesta, accende un fuoco che scalda un tubo dove passa
 la nostra acqua corrente. In sostanza, è uno scaldacqua in tempo reale senza serbatoio.
 
-La caldaia è un dispositivo abbastanza stupido. Non sa quando scaldare casa. Non capisce la temperatura
-dell'ambiente per regolarsi su come e quanto scaldare. Il dispositivo adibito a questi ragionamenti si chiama
+La caldaia è un dispositivo abbastanza stupido. Non sa quando scaldare casa. Non rileva la temperatura
+dell'ambiente per capire come regolare il riscaldamento. Il dispositivo adibito a questi ragionamenti si chiama
 **termostato**.
 
 Il termostato è generalmente esterno alla caldaia, anzi può addirittura essere di un produttore diverso
