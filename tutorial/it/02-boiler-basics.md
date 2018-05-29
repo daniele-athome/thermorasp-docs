@@ -14,7 +14,7 @@ Quasi tutte le caldaie (il 99%, accertatevi dal manuale che non ricadiate nell'1
 attivazione detto **circuito ON/OFF**. In pratica si tratta di due contatti che, quando collegati tra loro
 (messi in corto), fanno accendere la fiamma alla caldaia. Quando i contatti sono scollegati, la fiamma si spenge.
 
-Per controllare la temperatura, ciò che un termostato fa in soldoni è:
+Per controllare la temperatura, ciò che un termostato fa, in soldoni, è:
 
 1. Rilevare la temperatura dell'ambiente
 2. Se la temperatura è superiore a quella richiesta, disattiva la caldaia
