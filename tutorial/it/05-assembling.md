@@ -3,6 +3,8 @@ La costruzione è talmente semplice che mi sembra inutile andare step-by-step su
 componenti.  
 La scelta dei pin è stata assolutamente personale. Ovviamente non vuol dire che potete scegliere dei pin a caso.
 
+Di seguito scenderemo nel dettaglio dei componenti che collegheremo alla Raspberry.
+
 #### Circuito relè
 
 ![Relay board](relay_board.jpg)
