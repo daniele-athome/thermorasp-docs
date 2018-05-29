@@ -43,7 +43,8 @@ entrambe le partizioni e mettete la SD card nella Raspberry per farla partire.
 
 ### Installazione software termostato
 Alla prima installazione sarà necessario eseguire lo script di aggiornamento manualmente
-per installare subito tutto il software necessario. Entrate in SSH sul termostato ed eseguite:
+per installare subito tutto il software necessario. Entrate in SSH sul termostato come utente pi
+ed eseguite:
 
 ```
 $ sudo /etc/cron.daily/thermostat-updater
