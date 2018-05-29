@@ -34,6 +34,42 @@ Abbassando il pin (0 - LOW), il relè invertirà la situazione: NC aperto, NO ch
 Peccando di disattenzione, ho acquistato per errore un relè che si attiva a 5 V. Me la sono cavata con un "magheggio" lato software, ma ve lo sconsiglio (onestamente non ho capito come abbia fatto a funzionare).
 **Accertatevi che il relè si attivi a 3.3 V.**
 
+#### Sensore di temperatura
+Il sensore di temperatura è un DS18B20, un componentino minuscolo:
+
+![DS18B20 Temperature Sensor](temperature-sensor-ds18b20.jpg)
+
+Il sensore dispone di tre pin:
+
+* terra (1)
+* dati/controllo (2)
+* alimentazione (3)
+
+Questo piccolo aggeggio è in grado di fare molte cose, tra cui attivare un allarme per un certo range
+di temperatura e altro, ma le funzioni aggiuntive sono fuori dallo scopo di questo tutorial. Per saperne
+di più potete consultare il [datasheet del sensore](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf).
+
+Il sensore può essere collegato in vari modi (addirittura può operare in assenza di alimentazione sul pin 3),
+ma noi useremo quello raccomandato dal produttore, indicato nello schema di costruzione che [abbiamo già visto
+in un capitolo precedente](03-hardware-design.md).
+
+Notate il resistore inserito nel circuito del sensore. Viene definita *resistenza di pull-up*. Serve per
+stabilizzare la tensione che esce dal pin dati che, a quanto pare, è solito che non sia stabile nei circuiti
+integrati. Il componente ha bisogno di distinguere chiaramentra valori alto e basso (1 e 0) per capire
+chiaramente i messaggi che riceve.
+
+> In realtà i pin digitali della Raspberry hanno tutti una resistenza di pull-up interna attivabile via software,
+ma pare che non sia adeguata a questo uso, o almeno il produttore raccomanda sempre una resistenza esterna in
+quanto diventa nota nel circuito - ciò a testimonianza del fatto non sono riuscito a trovare informazioni precise
+sulla resistenza di pull-up interna alla Rasp, se non il fatto che sia presente e attivabile. In alcuni forum
+sostengono che non sia sufficiente, noi per sicurezza ce ne mettiamo una.
+
+Il sensore usa un protocollo particolare sul pin dati chiamato [1-Wire](https://en.wikipedia.org/wiki/1-Wire), un
+protocollo che consente con un solo pin di fornire un canale per i dati e per l'alimentazione, tutto a basso consumo.
+Un'altra proprietà interessante di questo protocollo è che, se avete più sensori di temperatura che implementano
+il 1-Wire, possono essere collegati insieme (con un cavo solo).
+
+#### Assemblaggio finale
 Alla fine dovreste avere un risultato simile a questo:
 
 (foto assemblaggio completo)
