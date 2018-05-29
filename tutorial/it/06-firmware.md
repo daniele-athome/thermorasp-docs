@@ -46,7 +46,7 @@ Alla prima installazione sarà necessario eseguire lo script di aggiornamento ma
 per installare subito tutto il software necessario. Entrate in SSH sul termostato ed eseguite:
 
 ```
-sudo /etc/cron.daily/thermostat-updater
+$ sudo /etc/cron.daily/thermostat-updater
 ```
 
 Lo script si connetterà ad Internet e scaricherà automaticamente il software direttamente dai
